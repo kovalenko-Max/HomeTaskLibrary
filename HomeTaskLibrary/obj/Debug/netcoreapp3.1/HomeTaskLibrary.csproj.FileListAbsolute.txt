@@ -1,0 +1,9 @@
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.deps.json
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.dll
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.pdb
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.csprojAssemblyReference.cache
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.AssemblyInfoInputs.cache
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.AssemblyInfo.cs
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.dll
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.pdb
