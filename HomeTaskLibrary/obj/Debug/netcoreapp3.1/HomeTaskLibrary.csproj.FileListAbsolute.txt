@@ -7,3 +7,16 @@ C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\net
 C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.dll
 C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.pdb
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.csprojAssemblyReference.cache
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.AssemblyInfoInputs.cache
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.AssemblyInfo.cs
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.csproj.CoreCompileInputs.cache
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.dll
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.pdb
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.deps.json
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.dll
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.pdb
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.exe
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.runtimeconfig.json
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.runtimeconfig.dev.json
+D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.genruntimeconfig.cache

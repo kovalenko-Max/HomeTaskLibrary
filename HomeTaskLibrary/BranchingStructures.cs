@@ -58,15 +58,15 @@ namespace HomeTaskLibrary
             //Пользователь вводит 3 числа (A, B и С). Выведите их в консоль в порядке возрастания.
             if (a > c)
             {
-                Swap(ref a, ref c);
+                Variables.Swap(ref a, ref c);
             }
             if (a > b)
             {
-                Swap(ref a, ref b);
+                Variables.Swap(ref a, ref b);
             }
             if (b > c)
             {
-                Swap(ref b, ref c);
+                Variables.Swap(ref b, ref c);
             }
         }        
 
@@ -206,19 +206,6 @@ namespace HomeTaskLibrary
             }
             return outputText;
         }
-
-        public static void Swap(ref double a, ref double b)
-        {
-            double tmp = a;
-            a = b;
-            b = tmp;
-        }
-
-        public static void Swap(ref int a, ref int b)
-        {
-            int tmp = a;
-            a = b;
-            b = tmp;
-        }
+        
     }
 }

@@ -12,14 +12,7 @@ namespace HomeTaskLibrary
             }
 
             return (5 * a + b * b) / (b - a);
-        }
-
-        public static void swap(ref double a, ref double b)
-        {
-            double tmp = a;
-            a = b;
-            b = tmp;
-        }
+        }        
 
         public static string division(double a, double b)
         {
@@ -48,6 +41,20 @@ namespace HomeTaskLibrary
             b = y1 - x1 * a;
 
             return Tuple.Create(a, b);
+        }
+
+        public static void Swap(ref double a, ref double b)
+        {
+            double tmp = a;
+            a = b;
+            b = tmp;
+        }
+
+        public static void Swap(ref int a, ref int b)
+        {
+            int tmp = a;
+            a = b;
+            b = tmp;
         }
     }
 }

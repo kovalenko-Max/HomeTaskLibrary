@@ -2,11 +2,11 @@
 
 namespace HomeTaskLibrary
 {
-    class OneDimensionalArrays
+    public class OneDimensionalArrays
     {
-        public static double[] GetRandomArray(int lenght)
+        public static int[] GetRandomArray(int lenght)
         {
-            double[] array = new double[lenght];
+            int[] array = new int[lenght];
             int randomTo = 100;
             Random random = new Random();
 
@@ -48,9 +48,86 @@ namespace HomeTaskLibrary
             return minValue;
         }
 
-        public static void Sort(ref int[] array)
+        public static int GetIndexOfMaxElementOfArray(int[] array)
         {
-            int temp;
+            int maxValue = GetMaxElementOfArray(array);
+            int maxIndex = 0;
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] == maxValue)
+                {
+                    maxIndex = i;
+                    break;
+                }                
+            }
+            return maxIndex;
+        }
+
+        public static int GetIndexOfMinElementOfArray(int[] array)
+        {
+            int minValue = GetMinElementOfArray(array);
+            int minIndex = 0;
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] == minValue)
+                {
+                    minIndex = i;
+                    break;
+                }
+            }
+            return minIndex;
+        }
+
+        public static int GetSumOdd(int[] array)
+        {
+            int sum = 0;
+            for (int i = 1; i < array.Length; i += 2)
+            {
+                sum += array[i];
+            }
+            return 0;
+        }
+        
+        public static void ReverseArray(ref int[] array)
+        {
+            int halfLenght = array.Length / 2;
+
+            for (int i = 0; i < halfLenght; ++i)
+            {
+                int rotateIndex = array.Length - 1 - i;
+                Variables.Swap(ref array[i], ref array[rotateIndex]);
+            }            
+        }
+
+        public static int GetCountOfOddElements(int[] array)
+        {
+            int count = 0;            
+            for (int i = 0; i < array.Length; ++i)
+            {
+                if (array[i] % 2 != 0)
+                {
+                    ++count;
+                }
+            }
+            return count;
+        }
+
+        public static void ChangeHalfsOfArray(ref int[] array)
+        {
+            int halfLenght = array.Length / 2;
+            int j = array.Length % 2 == 0 ? halfLenght : halfLenght + 1;
+
+            for (int i = 0; i < halfLenght; ++i)
+            {
+                Variables.Swap(ref array[i], ref array[j]);
+                ++j;
+            }
+        }
+
+        public static void SortAscending(ref int[] array)
+        {            
             int min;
 
             for (int i = 0; i < array.Length - 1; ++i)
@@ -63,16 +140,30 @@ namespace HomeTaskLibrary
                         min = j;
                     }
                 }
-                BranchingStructures.Swap(ref array[min], ref array[i]);                
+                Variables.Swap(ref array[min], ref array[i]);
             }
         }
 
-        public static void print(int[] array)
+        public static void SortDescending(ref int[] array)
+        {
+            for (int i = 1; i < array.Length; i++)
+            {
+                int j = i - 1;
+                while ((j >= 0) && (array[j] < array[j + 1]))
+                {
+                    Variables.Swap(ref array[j], ref array[j + 1]);
+                    j--;
+                }
+            }
+        }
+
+        public static void Print(int[] array)
         {
             foreach (int a in array)
             {
                 Console.Write(a + " ");
             }
+            Console.WriteLine();
         }
     }
 }
