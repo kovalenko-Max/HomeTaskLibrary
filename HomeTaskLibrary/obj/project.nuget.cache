@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "1W/vFAnu+eIdwsCobH7eDsf2vWMOsmubmLZtRGDYrxI91xaCLDEGH9zEVdx5T8bH3pMpmPe2zIk9ROfh43R2eQ==",
+  "dgSpecHash": "0jCZoV/erheFMxeZYvCDdCEhOcg3oympT4DeXkdVRXalMqaktT2gRpUOE2dW3OJp2SadCt0t0/rotG5IYQc7Sw==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\Projects\\HomeTaskLibrary\\HomeTaskLibrary\\HomeTaskLibrary.csproj",
+  "projectFilePath": "C:\\Users\\Maks\\OneDrive\\Programming\\HomeTaskLibrary\\HomeTaskLibrary\\HomeTaskLibrary.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Maks\\OneDrive\\Programming\\HomeTaskLibrary\\HomeTaskLibrary\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

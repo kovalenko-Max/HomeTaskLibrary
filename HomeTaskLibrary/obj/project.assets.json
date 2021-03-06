@@ -8,24 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Maks\\.nuget\\packages\\": {},
-    "D:\\Programming\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Maks\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\Projects\\HomeTaskLibrary\\HomeTaskLibrary\\HomeTaskLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Maks\\OneDrive\\Programming\\HomeTaskLibrary\\HomeTaskLibrary\\HomeTaskLibrary.csproj",
       "projectName": "HomeTaskLibrary",
-      "projectPath": "D:\\Programming\\Projects\\HomeTaskLibrary\\HomeTaskLibrary\\HomeTaskLibrary.csproj",
+      "projectPath": "C:\\Users\\Maks\\OneDrive\\Programming\\HomeTaskLibrary\\HomeTaskLibrary\\HomeTaskLibrary.csproj",
       "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\Projects\\HomeTaskLibrary\\HomeTaskLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Maks\\OneDrive\\Programming\\HomeTaskLibrary\\HomeTaskLibrary\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Programming\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\Maks\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -65,8 +60,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Maks\\OneDrive\\Programming\\HomeTaskLibrary\\HomeTaskLibrary\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

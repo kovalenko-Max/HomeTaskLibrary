@@ -90,7 +90,7 @@ namespace HomeTaskLibrary
             return 0;
         }
         
-        public static void ReverseArray(ref int[] array)
+        public static int[] ReverseArray(int[] array)
         {
             int halfLenght = array.Length / 2;
 
@@ -98,7 +98,8 @@ namespace HomeTaskLibrary
             {
                 int rotateIndex = array.Length - 1 - i;
                 Variables.Swap(ref array[i], ref array[rotateIndex]);
-            }            
+            }
+            return array;
         }
 
         public static int GetCountOfOddElements(int[] array)
@@ -114,7 +115,7 @@ namespace HomeTaskLibrary
             return count;
         }
 
-        public static void ChangeHalfsOfArray(ref int[] array)
+        public static int[] ChangeHalfsOfArray(int[] array)
         {
             int halfLenght = array.Length / 2;
             int j = array.Length % 2 == 0 ? halfLenght : halfLenght + 1;
@@ -124,15 +125,14 @@ namespace HomeTaskLibrary
                 Variables.Swap(ref array[i], ref array[j]);
                 ++j;
             }
+            return array;
         }
 
-        public static void SortAscending(ref int[] array)
-        {            
-            int min;
-
+        public static int[] SortAscending(int[] array)
+        {
             for (int i = 0; i < array.Length - 1; ++i)
             {
-                min = i;
+                int min = i;
                 for (int j = i + 1; j < array.Length; j++)
                 {
                     if (array[j] < array[min])
@@ -142,9 +142,10 @@ namespace HomeTaskLibrary
                 }
                 Variables.Swap(ref array[min], ref array[i]);
             }
+            return array;
         }
 
-        public static void SortDescending(ref int[] array)
+        public static int[] SortDescending( int[] array)
         {
             for (int i = 1; i < array.Length; i++)
             {
@@ -155,6 +156,7 @@ namespace HomeTaskLibrary
                     j--;
                 }
             }
+            return array;
         }
 
         public static void Print(int[] array)
