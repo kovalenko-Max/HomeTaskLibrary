@@ -68,14 +68,7 @@ namespace HomeTaskLibrary
             {
                 Swap(ref b, ref c);
             }
-        }
-
-        public static void Swap(ref double a, ref double b)
-        {
-            double tmp = a;
-            a = b;
-            b = tmp;
-        }
+        }        
 
         public static double[] GetQuadraticEquationSolving(double a, double b, double c)
         {
@@ -212,6 +205,20 @@ namespace HomeTaskLibrary
                 }
             }
             return outputText;
+        }
+
+        public static void Swap(ref double a, ref double b)
+        {
+            double tmp = a;
+            a = b;
+            b = tmp;
+        }
+
+        public static void Swap(ref int a, ref int b)
+        {
+            int tmp = a;
+            a = b;
+            b = tmp;
         }
     }
 }
