@@ -8,16 +8,20 @@ namespace HomeTaskLibrary
     {
         public static void Main(string[] args)
         {
-            int[] array = OneDimensionalArrays.GetRandomArray(6);
-            OneDimensionalArrays.Print(array);
+            //int[] array = OneDimensionalArrays.GetRandomArray(6);
+            //OneDimensionalArrays.Print(array);
 
-            int minValue = OneDimensionalArrays.GetMinElementOfArray(array);
-            int minIndex = OneDimensionalArrays.GetIndexOfMinElementOfArray(array);
+            //int minValue = OneDimensionalArrays.GetMinElementOfArray(array);
+            //int minIndex = OneDimensionalArrays.GetIndexOfMinElementOfArray(array);
 
-            int maxValue = OneDimensionalArrays.GetMaxElementOfArray(array);
-            int maxIndex = OneDimensionalArrays.GetIndexOfMaxElementOfArray(array);
+            //int maxValue = OneDimensionalArrays.GetMaxElementOfArray(array);
+            //int maxIndex = OneDimensionalArrays.GetIndexOfMaxElementOfArray(array);
 
-            Console.WriteLine($"MinValue = {minValue}[{minIndex}] \nMaxValue = {maxValue}[{maxIndex}]");
+            //Console.WriteLine($"MinValue = {minValue}[{minIndex}] \nMaxValue = {maxValue}[{maxIndex}]");
+
+            int n = 10;
+
+            Console.WriteLine(Cycles.GetFibNumb(n));
         }
     }
 }
