@@ -9,6 +9,7 @@ namespace HomeTaskLibrary
         public static void Main(string[] args)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             //int[] array = OneDimensionalArrays.GetRandomArray(6);
             //OneDimensionalArrays.Print(array);
 
@@ -26,19 +27,11 @@ namespace HomeTaskLibrary
 =======
             int[,] array = TwoDimensionalArrays.GetRandomArray(6, 3, 100);
             TwoDimensionalArrays.Print(array);
+=======
+            int numb = 64;
+>>>>>>> master
 
-            int minVal = TwoDimensionalArrays.GetMinElement(array);
-            Tuple<int, int> indexOfMinValue = TwoDimensionalArrays.GetIndexOfMinElement(array);
-            int maxVal = TwoDimensionalArrays.GetMaxElement(array);
-            Tuple<int, int> indexOfMaxValue = TwoDimensionalArrays.GetIndexMaxElement(array);   
-                        
-            Console.WriteLine("Max Value = " + maxVal + " " + indexOfMaxValue + "\nMin Value = " + minVal + " " + indexOfMinValue);
-
-            Console.WriteLine("Count = " + TwoDimensionalArrays.CountElementsBiggerThanNeighbors(array));
-
-            int[,] tArray = TwoDimensionalArrays.GetTranspositionArray(array);
-
-            TwoDimensionalArrays.Print(tArray);
+            Console.WriteLine(Cycles.GetNumbersWhichSumOfEvenIsBiggerThanOdd(numb));
 
 >>>>>>> master
         }
