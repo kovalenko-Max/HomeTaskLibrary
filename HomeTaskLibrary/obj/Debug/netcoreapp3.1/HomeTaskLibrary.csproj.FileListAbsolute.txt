@@ -20,3 +20,7 @@ D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\
 D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.runtimeconfig.json
 D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.runtimeconfig.dev.json
 D:\Programming\Projects\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.genruntimeconfig.cache
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.exe
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.runtimeconfig.json
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\bin\Debug\netcoreapp3.1\HomeTaskLibrary.runtimeconfig.dev.json
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary\obj\Debug\netcoreapp3.1\HomeTaskLibrary.genruntimeconfig.cache
