@@ -30,7 +30,7 @@ namespace HomeTaskLibrary.Tests
         [TestCase(0, 0, 1, 0, 0, 1)]
         [TestCase(0, 1, 0, 0, 0, 1)]
         [TestCase(1, 1, 1.00000001, 1, 1, 1.00000001)]
-        public void SortThreeVariablesWhenABCShouldBeAscending(double a, double b, double c, 
+        public void SortThreeVariablesWhenABCShouldBeAscending(double a, double b, double c,
             double expectedA, double expectedB, double expectedC)
         {
             BranchingStructures.SortThreeVariables(ref a, ref b, ref c);
@@ -41,7 +41,7 @@ namespace HomeTaskLibrary.Tests
 
         [TestCase(2, 4, 0, new double[] { -2, 0 })]
         [TestCase(1, 0, 0, new double[] { 0 })]
-        [TestCase(5, 0, 3, new double[] {})]
+        [TestCase(5, 0, 3, new double[] { })]
         public void GetQuadraticEquationSolvingWhenABCShouldSolvQuadraticEquation(double a, double b, double c, double[] expected)
         {
             double[] actual = BranchingStructures.GetQuadraticEquationSolving(a, b, c);

@@ -136,3 +136,5 @@ _NCrunch*
 HomeTaskLibrary/bin/
 
 HomeTaskLibrary/obj/
+
+HomeTaskLibrary/ConsoleApp.cs
