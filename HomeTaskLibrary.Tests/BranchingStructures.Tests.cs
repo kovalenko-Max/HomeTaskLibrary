@@ -2,7 +2,7 @@
 
 namespace HomeTaskLibrary.Tests
 {
-    class BranchingStructuresTests
+    public class BranchingStructuresTests
     {
         [TestCase(0, 0, 0)]
         [TestCase(1, 0, 1)]

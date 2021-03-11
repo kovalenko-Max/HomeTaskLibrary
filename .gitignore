@@ -138,3 +138,7 @@ HomeTaskLibrary/bin/
 HomeTaskLibrary/obj/
 
 HomeTaskLibrary/ConsoleApp.cs
+
+HomeTaskLibrary.Tests/bin/
+
+HomeTaskLibrary.Tests/obj/

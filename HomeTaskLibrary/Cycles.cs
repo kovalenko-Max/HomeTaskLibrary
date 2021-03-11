@@ -6,9 +6,9 @@ namespace HomeTaskLibrary
 {
     public class Cycles
     {
-        public static double GetDegreeOf(double a, int b)
+        public static int GetDegreeOf(int a, int b)
         {
-            double result = a;
+            int result = a;
 
             for (int i = 1; i < b; i++)
             {
@@ -192,7 +192,7 @@ namespace HomeTaskLibrary
 
             int[] result = new int[numb / 2];
 
-            int j = 0;
+            int resultsLenght = 0;
             for (int i = 1; i <= numb; i++)
             {
                 string temp = i.ToString();
@@ -203,13 +203,13 @@ namespace HomeTaskLibrary
                 }
                 if (evenSum > oddSum)
                 {
-                    result[j] = i;
-                    j++;
+                    result[resultsLenght] = i;
+                    resultsLenght++;
                 }
                 evenSum = 0;
                 oddSum = 0;
             }
-
+            Array.Resize(ref result, resultsLenght);
             return result;
         }
 
