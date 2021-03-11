@@ -8,17 +8,13 @@ namespace HomeTaskLibrary
     {
         public static void Main(string[] args)
         {
-            double a = 0;
-            double b = 0;
-            double x1 = 999999999999999999;
-            double y1 = 999999999999999999;
-            double x2 = 0;
-            double y2 = 999999999999999999;
+            double[] sol = BranchingStructures.GetQuadraticEquationSolving(1, 0, 0);
 
-            (a, b) = Variables.GetCoordinateQuarter(x1, y1, x2, y2);
+            foreach(double s in sol)
+            {
+                Console.WriteLine(s);
+            }
 
-            Console.WriteLine(a);
-            Console.WriteLine(b);
         }
     }
 }

@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 
 namespace HomeTaskLibrary.Tests
 {
@@ -68,11 +69,15 @@ namespace HomeTaskLibrary.Tests
         }
 
         [TestCase(1.4, 25, 10, 26, 0.11627906976744186, 24.837209302325583)]
-        [TestCase(1, 1, 999999999999999999, 1, 0, -1)]
+        [TestCase(1, 1, 999999999999999999, 1, 0, 1)]
         [TestCase(999999999999999999, 999999999999999999, 0, 999999999999999999, 0, 1E+18)]
         public void GetCoordinateQuarterWhenX1Y1X2Y2ShouldBeLenearEquation(double x1, double y1, double x2, double y2, double expectedA, double expectedB)
         {
-            (double actualA, double actualB) = Variables.GetCoordinateQuarter(x1, y1, x2, y2);
+            Tuple<double, double> actual = Variables.GetCoordinateQuarter(x1, y1, x2, y2);
+            double actualA = actual.Item1;
+            double actualB = actual.Item2;
+            Assert.AreEqual(expectedA, actualA);
+            Assert.AreEqual(expectedB, actualB);
         }
     }
 }

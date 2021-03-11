@@ -43,13 +43,13 @@ namespace HomeTaskLibrary
             }
         }
 
-        public static (double, double) GetCoordinateQuarter(double x1, double y1, double x2, double y2)
+        public static Tuple<double, double> GetCoordinateQuarter(double x1, double y1, double x2, double y2)
         {
             if(x1 != x2)
             {
                 double a = (y1 - y2) / (x1 - x2);
                 double b = y1 - x1 * a;
-                return (a, b);
+                return Tuple.Create(a, b);
             }
             else
             {

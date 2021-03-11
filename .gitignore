@@ -132,3 +132,7 @@ $RECYCLE.BIN/
 
 _NCrunch*
 .vs/
+
+HomeTaskLibrary/bin/
+
+HomeTaskLibrary/obj/

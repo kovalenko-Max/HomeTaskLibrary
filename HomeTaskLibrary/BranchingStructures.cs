@@ -102,7 +102,7 @@ namespace HomeTaskLibrary
                 switch (numb)
                 {
                     case 10:
-                        outputText = "Ten";
+                        outputText = "ten";
                         break;
                     case 11:
                         outputText = "eleven";
@@ -198,6 +198,5 @@ namespace HomeTaskLibrary
             }
             return outputText;
         }
-
     }
 }
