@@ -4,9 +4,8 @@ using System.Text;
 
 namespace HomeTaskLibrary
 {
-    class TwoDimensionalArrays
+    public class TwoDimensionalArrays
     {
-
         public static int GetMinElement(int[,] array)
         {
             int min = array[0, 0];

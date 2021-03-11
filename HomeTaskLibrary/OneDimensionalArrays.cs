@@ -59,7 +59,7 @@ namespace HomeTaskLibrary
                 {
                     maxIndex = i;
                     break;
-                }                
+                }
             }
             return maxIndex;
         }
@@ -89,7 +89,7 @@ namespace HomeTaskLibrary
             }
             return 0;
         }
-        
+
         public static int[] ReverseArray(int[] array)
         {
             int halfLenght = array.Length / 2;
@@ -104,7 +104,7 @@ namespace HomeTaskLibrary
 
         public static int GetCountOfOddElements(int[] array)
         {
-            int count = 0;            
+            int count = 0;
             for (int i = 0; i < array.Length; ++i)
             {
                 if (array[i] % 2 != 0)
@@ -145,7 +145,7 @@ namespace HomeTaskLibrary
             return array;
         }
 
-        public static int[] SortDescending( int[] array)
+        public static int[] SortDescending(int[] array)
         {
             for (int i = 1; i < array.Length; i++)
             {

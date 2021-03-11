@@ -74,7 +74,7 @@ namespace HomeTaskLibrary
 
             if (a == 0)
             {
-                throw new Exception("a == 0. It`s not a Quadratic Equation");
+                throw new ArgumentException("a == 0. It`s not a Quadratic Equation");
             }
             if (discriminant < 0)
             {
