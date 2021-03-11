@@ -97,3 +97,6 @@ C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary.Tests\obj\Deb
 C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary.Tests\obj\Debug\netcoreapp3.1\HomeTaskLibrary.Tests.dll
 C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary.Tests\obj\Debug\netcoreapp3.1\HomeTaskLibrary.Tests.pdb
 C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary.Tests\obj\Debug\netcoreapp3.1\HomeTaskLibrary.Tests.genruntimeconfig.cache
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary.Tests\bin\Debug\netcoreapp3.1\HomeTaskLibrary.deps.json
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary.Tests\bin\Debug\netcoreapp3.1\HomeTaskLibrary.runtimeconfig.json
+C:\Users\Maks\OneDrive\Programming\HomeTaskLibrary\HomeTaskLibrary.Tests\bin\Debug\netcoreapp3.1\HomeTaskLibrary.runtimeconfig.dev.json

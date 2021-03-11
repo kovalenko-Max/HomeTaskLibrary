@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace HomeTaskLibrary.Tests
 {
-    class Class1
+    class BranchingStructuresTests
     {
     }
 }

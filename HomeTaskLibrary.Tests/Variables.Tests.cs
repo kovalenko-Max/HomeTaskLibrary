@@ -16,7 +16,19 @@ namespace HomeTaskLibrary.Tests
         [TestCase(5, 6, 6, 5)]
         [TestCase(7, 12, 12, 7)]
         [TestCase(10, 6, 6, 10)]
-        public void SwapWhenAandBShouldBeBAndA(int a, int b, int expectedA, int expectedB)
+        public void SwapWhenIntAandBShouldBeBAndA(int a, int b, int expectedA, int expectedB)
+        {
+            Variables.Swap(ref a, ref b);
+            expectedA = a;
+            expectedB = b;
+            Assert.AreEqual(expectedA, a);
+            Assert.AreEqual(expectedB, b);
+        }
+
+        [TestCase(5.4, 6.2, 6.2, 5.4)]
+        [TestCase(7, 12, 12, 7)]
+        [TestCase(0, 0, 0, 0)]
+        public void SwapWhenIntAandBShouldBeBAndA(double a, double b, double expectedA, double expectedB)
         {
             Variables.Swap(ref a, ref b);
             expectedA = a;

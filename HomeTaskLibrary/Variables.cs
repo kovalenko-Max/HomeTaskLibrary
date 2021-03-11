@@ -6,33 +6,41 @@ namespace HomeTaskLibrary
     {
         public static double CalculateEquation(double a, double b)
         {
-            if (b == a)
+            if (b != a)
+            {
+                return (5 * a + b * b) / (b - a);
+            }
+            else
             {
                 throw new DivideByZeroException();
             }
-
-            return (5 * a + b * b) / (b - a);
         }
 
         public static int[] Division(int a, int b)
         {
-            if (b == 0)
+            if (b != 0)
+            {
+                int[] result = new int[2];
+                result[0] = a / b;
+                result[1] = a % b;
+                return result;
+            }
+            else
             {
                 throw new DivideByZeroException();
             }
-            int[] result = new int[2];
-            result[0] = a / b;
-            result[1] = a % b;
-            return result;
         }
 
         public static double CalculateSolutionOfLinearEquation(double a, double b, double c)
         {
-            if (a == 0)
+            if (a != 0)
+            {
+                return (c - b) / a;
+            }
+            else
             {
                 throw new DivideByZeroException();
             }
-            return (c - b) / a;
         }
 
         public static (double, double) GetCoordinateQuarter(double x1, double y1, double x2, double y2)
