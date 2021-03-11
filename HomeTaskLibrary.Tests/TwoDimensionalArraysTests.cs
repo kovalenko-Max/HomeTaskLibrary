@@ -10,7 +10,7 @@ namespace HomeTaskLibrary.Tests
             int actual = TwoDimensionalArrays.GetMinElement(array);
             Assert.AreEqual(expected, actual);
         }
-        public void GetIndexOfMinElementTest(int[,] array, Tuple<int, int> expected ) 
+        public void GetIndexOfMinElementTest(int[,] array, Tuple<int, int> expected)
         {
             Tuple<int, int> actual = TwoDimensionalArrays.GetIndexOfMinElement(array);
             Assert.AreEqual(expected, actual);

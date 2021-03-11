@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HomeTaskLibrary
 {
@@ -25,7 +23,7 @@ namespace HomeTaskLibrary
                     if (array[i, j] == min)
                     {
                         minI = i;
-                        minJ = j;                        
+                        minJ = j;
                     }
                 }
             }

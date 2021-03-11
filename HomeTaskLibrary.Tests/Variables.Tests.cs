@@ -13,7 +13,7 @@ namespace HomeTaskLibrary.Tests
             double actual = Variables.CalculateEquation(a, b);
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestCase(5, 6, 6, 5)]
         [TestCase(7, 12, 12, 7)]
         [TestCase(10, 6, 6, 10)]
@@ -50,9 +50,9 @@ namespace HomeTaskLibrary.Tests
             Assert.AreEqual(expectedB, b);
         }
 
-        [TestCase(255, 5, new int[] { 51, 0})]
-        [TestCase(0, 5, new int[] { 0, 0})]
-        [TestCase(100000000, 5, new int[] { 20000000, 0})]
+        [TestCase(255, 5, new int[] { 51, 0 })]
+        [TestCase(0, 5, new int[] { 0, 0 })]
+        [TestCase(100000000, 5, new int[] { 20000000, 0 })]
         public void DivisionTest(int a, int b, int[] expected)
         {
             int[] actual = Variables.Division(a, b);
@@ -62,7 +62,7 @@ namespace HomeTaskLibrary.Tests
         [TestCase(1, 0.25, 999999999, 999999998.75)]
         [TestCase(500, 0.0005, 1, 0.001999)]
 
-        public void CalculateSolutionOfLinearEquationWhenAandBandCSouldBeSolution(double a, double b, double c, double expected )
+        public void CalculateSolutionOfLinearEquationWhenAandBandCSouldBeSolution(double a, double b, double c, double expected)
         {
             double actual = Variables.CalculateSolutionOfLinearEquation(a, b, c);
             Assert.AreEqual(expected, actual);

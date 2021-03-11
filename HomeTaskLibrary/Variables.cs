@@ -45,7 +45,7 @@ namespace HomeTaskLibrary
 
         public static Tuple<double, double> GetCoordinateQuarter(double x1, double y1, double x2, double y2)
         {
-            if(x1 != x2)
+            if (x1 != x2)
             {
                 double a = (y1 - y2) / (x1 - x2);
                 double b = y1 - x1 * a;
@@ -63,7 +63,7 @@ namespace HomeTaskLibrary
             a = b;
             b = tmp;
         }
-        
+
         public static void Swap(ref int a, ref int b)
         {
             int tmp = a;
