@@ -8,24 +8,13 @@ namespace HomeTaskLibrary
     {
         public static int GetMinElement(int[,] array)
         {
-            int min = array[0, 0];
-
-            for (int i = 0; i < array.GetLength(0); ++i)
-            {
-                for (int j = 0; j < array.GetLength(1); ++j)
-                {
-                    if (array[i, j] < min)
-                    {
-                        min = array[i, j];
-                    }
-                }
-            }
-            return min;
+            (int minI, int minJ) = GetIndexOfMinElement(array);
+            return array[minI, minJ];
         }
 
         public static Tuple<int, int> GetIndexOfMinElement(int[,] array)
         {
-            int min = GetMinElement(array);
+            int min = array[0, 0];
             int minI = 0;
             int minJ = 0;
 
@@ -36,8 +25,7 @@ namespace HomeTaskLibrary
                     if (array[i, j] == min)
                     {
                         minI = i;
-                        minJ = j;
-                        break;
+                        minJ = j;                        
                     }
                 }
             }
@@ -46,23 +34,13 @@ namespace HomeTaskLibrary
 
         public static int GetMaxElement(int[,] array)
         {
-            int max = array[0, 0];
-            for (int i = 0; i < array.GetLength(0); ++i)
-            {
-                for (int j = 0; j < array.GetLength(1); ++j)
-                {
-                    if (array[i, j] > max)
-                    {
-                        max = array[i, j];
-                    }
-                }
-            }
-            return max;
+            (int maxI, int maxJ) = GetIndexOfMaxElement(array);
+            return array[maxI, maxJ];
         }
 
-        public static Tuple<int, int> GetIndexMaxElement(int[,] array)
+        public static Tuple<int, int> GetIndexOfMaxElement(int[,] array)
         {
-            int max = GetMaxElement(array);
+            int max = array[0, 0];
             int maxI = 0;
             int maxJ = 0;
 
@@ -74,41 +52,11 @@ namespace HomeTaskLibrary
                     {
                         maxI = i;
                         maxJ = j;
-                        break;
                     }
                 }
             }
 
             return Tuple.Create(maxI, maxJ);
-        }
-
-        public static int[,] GetRandomArray(int arrayWidth, int arrayHight, int randomTo)
-        {
-            int[,] array = new int[arrayHight, arrayWidth];
-            Random random = new Random();
-
-            for (int i = 0; i < array.GetLength(0); ++i)
-            {
-                for (int j = 0; j < array.GetLength(1); ++j)
-                {
-                    array[i, j] = random.Next(randomTo);
-                }
-            }
-            return array;
-        }
-
-        public static void Print(int[,] array)
-        {
-            Console.WriteLine();
-            for (int i = 0; i < array.GetLength(0); ++i)
-            {
-                Console.WriteLine();
-                for (int j = 0; j < array.GetLength(1); ++j)
-                {
-                    Console.Write(array[i, j] + " ");
-                }
-            }
-            Console.WriteLine();
         }
 
         public static int CountElementsBiggerThanNeighbors(int[,] array)
@@ -164,6 +112,35 @@ namespace HomeTaskLibrary
                 }
             }
             return resultArray;
+        }
+
+        public static int[,] GetRandomArray(int arrayWidth, int arrayHight, int randomTo)
+        {
+            int[,] array = new int[arrayHight, arrayWidth];
+            Random random = new Random();
+
+            for (int i = 0; i < array.GetLength(0); ++i)
+            {
+                for (int j = 0; j < array.GetLength(1); ++j)
+                {
+                    array[i, j] = random.Next(randomTo);
+                }
+            }
+            return array;
+        }
+
+        public static void Print(int[,] array)
+        {
+            Console.WriteLine();
+            for (int i = 0; i < array.GetLength(0); ++i)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < array.GetLength(1); ++j)
+                {
+                    Console.Write(array[i, j] + " ");
+                }
+            }
+            Console.WriteLine();
         }
     }
 }

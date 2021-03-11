@@ -4,61 +4,27 @@ namespace HomeTaskLibrary
 {
     public class OneDimensionalArrays
     {
-        public static int[] GetRandomArray(int lenght)
-        {
-            int[] array = new int[lenght];
-            int randomTo = 100;
-            Random random = new Random();
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = random.Next(randomTo);
-            }
-
-            return array;
-        }
-
         public static int GetMaxElementOfArray(int[] array)
         {
+            return array[GetIndexOfMaxElementOfArray(array)];
+        }
+
+        public static int GetMinElementOfArray(int[] array)
+        {
+            return array[GetIndexOfMinElementOfArray(array)];
+        }
+
+        public static int GetIndexOfMaxElementOfArray(int[] array)
+        {
             int maxValue = array[0];
+            int maxIndex = 0;
 
             for (int i = 1; i < array.Length; i++)
             {
                 if (array[i] > maxValue)
                 {
                     maxValue = array[i];
-                }
-            }
-
-            return maxValue;
-        }
-
-        public static int GetMinElementOfArray(int[] array)
-        {
-            int minValue = array[0];
-
-            for (int i = 1; i < array.Length; i++)
-            {
-                if (array[i] < minValue)
-                {
-                    minValue = array[i];
-                }
-            }
-
-            return minValue;
-        }
-
-        public static int GetIndexOfMaxElementOfArray(int[] array)
-        {
-            int maxValue = GetMaxElementOfArray(array);
-            int maxIndex = 0;
-
-            for (int i = 1; i < array.Length; i++)
-            {
-                if (array[i] == maxValue)
-                {
                     maxIndex = i;
-                    break;
                 }
             }
             return maxIndex;
@@ -66,15 +32,15 @@ namespace HomeTaskLibrary
 
         public static int GetIndexOfMinElementOfArray(int[] array)
         {
-            int minValue = GetMinElementOfArray(array);
+            int minValue = array[0];
             int minIndex = 0;
 
             for (int i = 1; i < array.Length; i++)
             {
-                if (array[i] == minValue)
+                if (array[i] < minValue)
                 {
+                    minValue = array[i];
                     minIndex = i;
-                    break;
                 }
             }
             return minIndex;
@@ -156,6 +122,20 @@ namespace HomeTaskLibrary
                     j--;
                 }
             }
+            return array;
+        }
+
+        public static int[] GetRandomArray(int lenght)
+        {
+            int[] array = new int[lenght];
+            int randomTo = 100;
+            Random random = new Random();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = random.Next(randomTo);
+            }
+
             return array;
         }
 
