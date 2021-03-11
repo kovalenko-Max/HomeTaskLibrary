@@ -4,7 +4,7 @@ namespace HomeTaskLibrary
 {
     public class Variables
     {
-        public static double CalculateEquation(int a, int b)
+        public static double CalculateEquation(double a, double b)
         {
             if (b == a)
             {
@@ -12,18 +12,21 @@ namespace HomeTaskLibrary
             }
 
             return (5 * a + b * b) / (b - a);
-        }        
+        }
 
-        public static string division(double a, double b)
+        public static int[] Division(int a, int b)
         {
             if (b == 0)
             {
                 throw new DivideByZeroException();
             }
-            return "a/b = " + a / b + " \nRemainder of the division = " + a % b;
+            int[] result = new int[2];
+            result[0] = a / b;
+            result[1] = a % b;
+            return result;
         }
 
-        public static double CalculateLinearEquation(double a, double b, double c)
+        public static double CalculateSolutionOfLinearEquation(double a, double b, double c)
         {
             if (a == 0)
             {
@@ -32,15 +35,18 @@ namespace HomeTaskLibrary
             return (c - b) / a;
         }
 
-        public static Tuple<double, double> GetCoordinateQuarter(double x1, double y1, double x2, double y2)
+        public static (double, double) GetCoordinateQuarter(double x1, double y1, double x2, double y2)
         {
-            string result = string.Empty;
-            double a = 0;
-            double b = 0;
-            a = (y1 - y2) / (x1 - x2);
-            b = y1 - x1 * a;
-
-            return Tuple.Create(a, b);
+            if(x1 != x2)
+            {
+                double a = (y1 - y2) / (x1 - x2);
+                double b = y1 - x1 * a;
+                return (a, b);
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
         }
 
         public static void Swap(ref double a, ref double b)

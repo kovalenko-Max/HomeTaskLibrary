@@ -6,7 +6,6 @@ namespace HomeTaskLibrary
     {
         public static double CalculateAB(double a, double b)
         {
-            //Пользователь вводит 2 числа (A и B). Если A>B, подсчитать A+B, если A=B, подсчитать A*B, если A<B, подсчитать A-B.
             double result = 0;
 
             if (a > b)
@@ -27,7 +26,6 @@ namespace HomeTaskLibrary
 
         public static int getQuarter(double x, double y)
         {
-            //Пользователь вводит 2 числа (X и Y). Определить какой четверти принадлежит точка с координатами (X,Y).
             int result = 0;
             if (x == 0 || y == 0)
             {
@@ -55,7 +53,6 @@ namespace HomeTaskLibrary
 
         public static void SortThreeVariables(ref double a, ref double b, ref double c)
         {
-            //Пользователь вводит 3 числа (A, B и С). Выведите их в консоль в порядке возрастания.
             if (a > c)
             {
                 Variables.Swap(ref a, ref c);
@@ -68,17 +65,14 @@ namespace HomeTaskLibrary
             {
                 Variables.Swap(ref b, ref c);
             }
-        }        
+        }
 
         public static double[] GetQuadraticEquationSolving(double a, double b, double c)
         {
-            //Пользователь вводит 3 числа (A, B и С). Выведите в консоль решение(значения X) 
-            //квадратного уравнения стандартного вида, где AX2+BX+C=0.
-
-            double[] results;            
+            double[] results;
             double discriminant = b * b - 4 * a * c;
 
-            if(a == 0)
+            if (a == 0)
             {
                 throw new Exception("a == 0. It`s not a Quadratic Equation");
             }
@@ -90,20 +84,18 @@ namespace HomeTaskLibrary
             {
                 results = new double[2];
                 results[0] = ((-b - Math.Sqrt(discriminant)) / (2 * a));
-                results[1] = ((-b + Math.Sqrt(discriminant)) / (2 * a));                
+                results[1] = ((-b + Math.Sqrt(discriminant)) / (2 * a));
             }
             else
             {
                 results = new double[1];
-                results[0] = (-b / (2 * a));                
+                results[0] = (-b / (2 * a));
             }
             return results;
         }
 
         public static string NumpToText(int numb)
         {
-            //Пользователь вводит двузначное число. Выведите в консоль прописную запись этого числа. 
-            //Например при вводе “25” в консоль будет выведено “двадцать пять”.
             string outputText = string.Empty;
             if (numb < 20)
             {
@@ -206,6 +198,6 @@ namespace HomeTaskLibrary
             }
             return outputText;
         }
-        
+
     }
 }

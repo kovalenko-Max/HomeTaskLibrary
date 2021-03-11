@@ -56,7 +56,6 @@ namespace HomeTaskLibrary
             return i - 1;
         }
 
-<<<<<<< HEAD
         public static int GreatestDivisor(int a)
         {
             int result = a;
@@ -124,7 +123,6 @@ namespace HomeTaskLibrary
 
             return result;
         }
-=======
         public static int GetGCD(int a, int b)
         {
             while ((a != 0) && (b != 0))
@@ -192,6 +190,7 @@ namespace HomeTaskLibrary
             int oddSum = 0;
 
             int[] result = new int[numb/2];
+
             int j = 0;
             for (int i = 1; i <= numb; i++)
             {
@@ -206,17 +205,11 @@ namespace HomeTaskLibrary
                     result[j] = i;
                     j++;
                 }
-
                 evenSum = 0;
                 oddSum = 0;
             }
 
-            int [] r = new int[]
-
             return result;
-
         }
-
->>>>>>> master
     }
 }

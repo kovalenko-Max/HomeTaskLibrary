@@ -8,32 +8,17 @@ namespace HomeTaskLibrary
     {
         public static void Main(string[] args)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            //int[] array = OneDimensionalArrays.GetRandomArray(6);
-            //OneDimensionalArrays.Print(array);
+            double a = 0;
+            double b = 0;
+            double x1 = 999999999999999999;
+            double y1 = 999999999999999999;
+            double x2 = 0;
+            double y2 = 999999999999999999;
 
-            //int minValue = OneDimensionalArrays.GetMinElementOfArray(array);
-            //int minIndex = OneDimensionalArrays.GetIndexOfMinElementOfArray(array);
+            (a, b) = Variables.GetCoordinateQuarter(x1, y1, x2, y2);
 
-            //int maxValue = OneDimensionalArrays.GetMaxElementOfArray(array);
-            //int maxIndex = OneDimensionalArrays.GetIndexOfMaxElementOfArray(array);
-
-            //Console.WriteLine($"MinValue = {minValue}[{minIndex}] \nMaxValue = {maxValue}[{maxIndex}]");
-
-            int n = 10;
-
-            Console.WriteLine(Cycles.GetFibNumb(n));
-=======
-            int[,] array = TwoDimensionalArrays.GetRandomArray(6, 3, 100);
-            TwoDimensionalArrays.Print(array);
-=======
-            int numb = 64;
->>>>>>> master
-
-            Console.WriteLine(Cycles.GetNumbersWhichSumOfEvenIsBiggerThanOdd(numb));
-
->>>>>>> master
+            Console.WriteLine(a);
+            Console.WriteLine(b);
         }
     }
 }
