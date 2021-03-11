@@ -212,5 +212,25 @@ namespace HomeTaskLibrary
 
             return result;
         }
+
+        public static bool IsIdenticalDigitsInNumbers(int numb1, int numb2)
+        {
+            string stringNumb1 = numb1.ToString();
+            string stringNumb2 = numb2.ToString();
+            bool IsIdenticalDigitsInNumbers = false;
+
+            for (int i = 0; i < stringNumb1.Length && !IsIdenticalDigitsInNumbers; i++)
+            {
+                for (int j = 0; j < stringNumb2.Length; j++)
+                {
+                    if (stringNumb1[i] == stringNumb2[j])
+                    {
+                        IsIdenticalDigitsInNumbers = true;
+                        break;
+                    }
+                }
+            }
+            return IsIdenticalDigitsInNumbers;
+        }
     }
 }
