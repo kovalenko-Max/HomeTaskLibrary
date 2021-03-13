@@ -12,7 +12,7 @@ namespace HomeTaskLibrary
             }
             else
             {
-                throw new DivideByZeroException();
+                throw new ArgumentException();
             }
         }
 
