@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace HomeTaskLibrary
 {
@@ -24,7 +26,7 @@ namespace HomeTaskLibrary
             return result;
         }
 
-        public static int getQuarter(double x, double y)
+        public static int GetQuarter(double x, double y)
         {
             int result = 0;
             if (x == 0 || y == 0)
@@ -96,107 +98,76 @@ namespace HomeTaskLibrary
 
         public static string NumpToText(int numb)
         {
-            string outputText = string.Empty;
-            if (numb < 20)
+            if (numb >= 10)
             {
-                switch (numb)
+                StringBuilder outputText = new StringBuilder();
+                Dictionary<int, string> dictonary = GetDictonaryNumbToString();
+
+                if (numb < 20)
                 {
-                    case 10:
-                        outputText = "ten";
-                        break;
-                    case 11:
-                        outputText = "eleven";
-                        break;
-                    case 12:
-                        outputText = "twelve";
-                        break;
-                    case 13:
-                        outputText = "thirteen";
-                        break;
-                    case 14:
-                        outputText = "fourteen";
-                        break;
-                    case 15:
-                        outputText = "fifteen";
-                        break;
-                    case 16:
-                        outputText = "sixteen";
-                        break;
-                    case 17:
-                        outputText = "seventeen";
-                        break;
-                    case 18:
-                        outputText = "eighteen";
-                        break;
-                    case 19:
-                        outputText = "nineteen";
-                        break;
+                    outputText.Append(dictonary[numb]);
                 }
+                else
+                {
+                    const int ten = 10;
+                    int tens = (numb / ten) * ten;
+                    int units = numb % ten;
+
+                    outputText.Append(dictonary[tens]);
+
+                    if (units != 0)
+                    {
+                        outputText.Append("-");
+                        outputText.Append(dictonary[units]);
+                    }
+                }
+
+                return outputText.ToString();
             }
             else
             {
-                int tens = numb / 10;
-                int units = numb % 10;
-                switch (tens)
-                {
-                    case 2:
-                        outputText += "twenty";
-                        break;
-                    case 3:
-                        outputText += "thirty";
-                        break;
-                    case 4:
-                        outputText += "forty";
-                        break;
-                    case 5:
-                        outputText += "fifty";
-                        break;
-                    case 6:
-                        outputText += "sixty";
-                        break;
-                    case 7:
-                        outputText += "seventy";
-                        break;
-                    case 8:
-                        outputText += "eighty";
-                        break;
-                    case 9:
-                        outputText += "ninety";
-                        break;
-                }
-                if (units != 0) outputText += "-";
-                switch (units)
-                {
-                    case 1:
-                        outputText += "one";
-                        break;
-                    case 2:
-                        outputText += "two";
-                        break;
-                    case 3:
-                        outputText += "three";
-                        break;
-                    case 4:
-                        outputText += "four";
-                        break;
-                    case 5:
-                        outputText += "five";
-                        break;
-                    case 6:
-                        outputText += "six";
-                        break;
-                    case 7:
-                        outputText += "seven";
-                        break;
-                    case 8:
-                        outputText += "eight";
-                        break;
-                    case 9:
-                        outputText += "nine";
-                        break;
-                }
+                throw new ArgumentException();
             }
-            return outputText;
+            {
+                throw new ArgumentException();
+            }
+
+            Dictionary<int, string> GetDictonaryNumbToString()
+            {
+                Dictionary<int, string> dictonary = new Dictionary<int, string>();
+
+                dictonary.Add(1, "one");
+                dictonary.Add(2, "two");
+                dictonary.Add(3, "three");
+                dictonary.Add(4, "four");
+                dictonary.Add(5, "five");
+                dictonary.Add(6, "six");
+                dictonary.Add(7, "seven");
+                dictonary.Add(8, "eight");
+                dictonary.Add(9, "nine");
+
+                dictonary.Add(10, "ten");
+                dictonary.Add(11, "eleven");
+                dictonary.Add(12, "twelve");
+                dictonary.Add(13, "thirteen");
+                dictonary.Add(14, "fourteen");
+                dictonary.Add(15, "fifteen");
+                dictonary.Add(16, "sixteen");
+                dictonary.Add(17, "seventeen");
+                dictonary.Add(18, "eighteen");
+                dictonary.Add(19, "nineteen");
+
+                dictonary.Add(20, "twenty");
+                dictonary.Add(30, "thirty");
+                dictonary.Add(40, "forty");
+                dictonary.Add(50, "fifty");
+                dictonary.Add(60, "sixty");
+                dictonary.Add(70, "seventy");
+                dictonary.Add(80, "eighty");
+                dictonary.Add(90, "ninety");
+
+                return dictonary;
+            }
         }
     }
 }

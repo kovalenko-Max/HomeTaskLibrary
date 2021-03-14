@@ -9,9 +9,16 @@ namespace HomeTaskLibrary
         {
             int result = a;
 
-            for (int i = 1; i < b; i++)
+            if (b != 0)
             {
-                result = result * a;
+                for (int i = 1; i < b; i++)
+                {
+                    result = result * a;
+                }
+            }
+            else
+            {
+                result = 1;
             }
 
             return result;
@@ -19,20 +26,29 @@ namespace HomeTaskLibrary
 
         public static int[] DivisionWithoutRemainderFromZeroToThouthen(int a)
         {
-            const int thousand = 1000;
-            int lengt = thousand / a;
-            int[] result = new int[lengt];
-            int i = 0;
-
-            for (int numb = a; numb <= thousand; numb += a)
+            if (a != 0)
             {
-                if (numb % a == 0)
+                a = Math.Abs(a);
+                const int thousand = 1000;
+                int lengt = thousand / a;
+                int[] result = new int[lengt];
+                int i = 0;
+
+                for (int numb = a; numb <= thousand; numb += a)
                 {
-                    result[i] = numb;
-                    ++i;
+                    if (numb % a == 0)
+                    {
+                        result[i] = numb;
+                        ++i;
+                    }
                 }
+
+                return result;
             }
-            return result;
+            else
+            {
+                throw new DivideByZeroException();
+            }
         }
 
         public static int GetCountOfsquareNumberLessThanA(int a)
@@ -45,28 +61,27 @@ namespace HomeTaskLibrary
             return i - 1;
         }
 
-        public static int GetCountOfsquareNumberLessThanA(double a)
-        {
-            int i = 1;
-            while ((i * i) < a)
-            {
-                i++;
-            }
-            return i - 1;
-        }
-
         public static int GreatestDivisor(int a)
         {
-            int result = a;
-            for (int i = a - 1; i > 0; --i)
+            if (a != 0)
             {
-                if (a % i == 0)
+                a = Math.Abs(a);
+                int result = a;
+                for (int i = a - 1; i > 0; --i)
                 {
-                    result = i;
-                    break;
+                    if (a % i == 0)
+                    {
+                        result = i;
+                        break;
+                    }
                 }
+
+                return result;
             }
-            return result;
+            else
+            {
+                throw new ArgumentException();
+            }
         }
 
         public static int GetSumOfNumbDivisionBySeven(int a, int b)
@@ -101,6 +116,12 @@ namespace HomeTaskLibrary
 
         public static int GetFibNumb(int n)
         {
+
+            if (n < 0)
+            {
+                throw new ArgumentException();
+            }
+
             int result = 0;
 
             if (n > 2)
@@ -117,7 +138,7 @@ namespace HomeTaskLibrary
             }
             else
             {
-                result = 1;
+                result = n == 0 ? 0 : 1;
             }
 
             return result;
@@ -125,23 +146,32 @@ namespace HomeTaskLibrary
 
         public static int GetGCD(int a, int b)
         {
+            a = Math.Abs(a);
+            b = Math.Abs(b);
             while ((a != 0) && (b != 0))
             {
-                if (a > b) a = a % b;
-                else b = b % a;
+                if (a > b)
+                {
+                    a = a % b;
+                }
+                else
+                {
+                    b = b % a;
+                }
             }
+
             return a + b;
         }
 
         public static double GetCubeRoot(int numb)
         {
             int cubeRoot = 0;
-
             double start = 0;
             double end = numb;
             double error = 0.000001;
             double mid = 0;
             double cubeOfMid = 0;
+
             do
             {
                 mid = (start + end) / 2;
@@ -163,12 +193,13 @@ namespace HomeTaskLibrary
         public static int GetCountOddDigit(int numb)
         {
             int count = 0;
-            string digit = numb.ToString();
+            string digit = (Math.Abs(numb)).ToString();
 
             for (int i = 0; i < digit.Length; i++)
             {
                 if (digit[i] % 2 != 0) count++;
             }
+
             return count;
         }
 
@@ -181,6 +212,7 @@ namespace HomeTaskLibrary
             {
                 result.Append(digit[i]);
             }
+
             return Convert.ToInt32(result.ToString());
         }
 
@@ -208,6 +240,7 @@ namespace HomeTaskLibrary
                 evenSum = 0;
                 oddSum = 0;
             }
+
             Array.Resize(ref result, resultsLenght);
             return result;
         }
