@@ -16,7 +16,7 @@ namespace HomeTaskLibrary.Tests
         }
 
         [TestCase(5,5)]
-        public void CalculateEquation_WhenAandB_ShouldThrowArgumentException(double a, double b)
+        public void CalculateEquation_WhenAEqualsB_ShouldThrowArgumentException(double a, double b)
         {
             Assert.Throws<ArgumentException>(() => Variables.CalculateEquation(a, b));
         }
@@ -26,7 +26,7 @@ namespace HomeTaskLibrary.Tests
         [TestCase(5.4, 6.2, 6.2, 5.4)]
         [TestCase(7, 12, 12, 7)]
         [TestCase(0, 0, 0, 0)]
-        public void Swap_When_DoubleAandB_ShouldBeBAndA(double a, double b, double expectedA, double expectedB)
+        public void Swap_When_DoubleAandB_ShouldBecameBAndA(double a, double b, double expectedA, double expectedB)
         {
             Variables.Swap(ref a, ref b);
             expectedA = a;
@@ -39,7 +39,7 @@ namespace HomeTaskLibrary.Tests
         [TestCase(7, 12, 12, 7)]
         [TestCase(10, 6, 6, 10)]
         [TestCase(0, 0, 0, 0)]
-        public void Swap_When_IntAandB_ShouldBeBAndA(int a, int b, int expectedA, int expectedB)
+        public void Swap_WhenIntAandB_ShouldBecameBAndA(int a, int b, int expectedA, int expectedB)
         {
             Variables.Swap(ref a, ref b);
             expectedA = a;
@@ -51,10 +51,16 @@ namespace HomeTaskLibrary.Tests
         [TestCase(255, 5, new int[] { 51, 0 })]
         [TestCase(0, 5, new int[] { 0, 0 })]
         [TestCase(100000000, 5, new int[] { 20000000, 0 })]
-        public void Division_WhetAAndB_ShooulrReturnArray(int a, int b, int[] expected)
+        public void Division_WhetAAndB_ShouldReturnArray(int a, int b, int[] expected)
         {
             int[] actual = Variables.Division(a, b);
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(1,0)]
+        public void Division_WhenBEquals0_ShouldThrowDivideByZeroException(int a, int b)
+        {
+            Assert.Throws<DivideByZeroException>(() => Variables.Division(a, b));
         }
 
         [TestCase(13, 5, 255, 19.23076923076923)]
@@ -65,6 +71,12 @@ namespace HomeTaskLibrary.Tests
         {
             double actual = Variables.CalculateSolutionOfLinearEquation(a, b, c);
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0, 1, 1)]
+        public void CalculateSolutionOfLinearEquation_WhenAEquals0_ShouldThrowDivideByZeroException(double a, double b, double c)
+        {
+            Assert.Throws<DivideByZeroException>(() => Variables.CalculateSolutionOfLinearEquation(a, b, c));
         }
 
         [TestCase(1.4, 25, 10, 26, 0.11627906976744186, 24.837209302325583)]
@@ -78,5 +90,12 @@ namespace HomeTaskLibrary.Tests
             Assert.AreEqual(expectedA, actualA);
             Assert.AreEqual(expectedB, actualB);
         }
+        
+        [TestCase(5,10, 5, 10)]
+        public void GetCoordinateQuarter_WhenX1EqualsX2_ShouldThrowArgumentException(double x1, double y1, double x2, double y2)
+        {
+            Assert.Throws<ArgumentException>(() => Variables.GetCoordinateQuarter(x1, y1, x2, y2));
+        }
+
     }
 }
