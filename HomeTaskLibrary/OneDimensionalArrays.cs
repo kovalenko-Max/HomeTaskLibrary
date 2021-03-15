@@ -53,7 +53,7 @@ namespace HomeTaskLibrary
             {
                 sum += array[i];
             }
-            return 0;
+            return sum;
         }
 
         public static int[] ReverseArray(int[] array)
