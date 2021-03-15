@@ -20,10 +20,11 @@ namespace HomeTaskLibrary
             {
                 for (int j = 0; j < array.GetLength(1); ++j)
                 {
-                    if (array[i, j] == min)
+                    if (array[i, j] < min)
                     {
                         minI = i;
                         minJ = j;
+                        min = array[i, j];
                     }
                 }
             }
@@ -46,10 +47,11 @@ namespace HomeTaskLibrary
             {
                 for (int j = 0; j < array.GetLength(1); ++j)
                 {
-                    if (array[i, j] == max)
+                    if (array[i, j] > max)
                     {
                         maxI = i;
                         maxJ = j;
+                        max = array[i, j];
                     }
                 }
             }
